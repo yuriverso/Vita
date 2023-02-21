@@ -1,24 +1,24 @@
 
 
 var timer;
-var seg = 0
+var sec = 0
 var min = 0
 var h = 0
+var d = 0
 
 function adicionar(){
-    seg += 1;
-
-    if(seg===60){
+    sec += 1;
+    if(sec===60){
         min++;
         document.getElementById("min").innerHTML = min;
-        seg=0;
+        sec=0;
     }
     if(min===60){
         h+=1;
         document.getElementById("h").innerHTML = h;
     }
-    
-    document.getElementById("seg").innerHTML = seg;
+    document.getElementById("seg").innerHTML = sec;
+    countTime();
 }
 
 function start(){
@@ -27,6 +27,23 @@ function start(){
 }
 function stop(){
     clearInterval(timer);
-    seg = min = h = 0;
+    sec = min = h = 0;
     document.getElementById("start").disabled = false
+}
+
+function countTime(){
+    var timeTracker = document.getElementById("timeTracker")
+
+    if(sec<10){
+        seconds = "0"+String(sec)
+    }else{
+        seconds = String(sec)
+    }
+    if(min<10){
+        minutes = "0"+String(min)
+    }else{
+        minutes = String(min)
+    }
+    timeTracker.innerHTML = minutes+":"+seconds
+
 }

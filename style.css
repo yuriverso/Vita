@@ -16,7 +16,7 @@ div#panel{
     border: 2px solid black;
 }
 div#image{
-    margin: 20px auto;
+    margin: 0px auto;
     height: 300px;
     width: 400px;
     border: 2px solid black;
@@ -25,13 +25,13 @@ img#backimage{
     position: relative;
     top: 0;
     left: 0;
-    visibility: hidden;
+    visibility: visible;
 }
 img#house{
     position: relative;
     top: -305px;
     right: 2px;
-    visibility: hidden;
+    visibility: visible;
 }
 section{
     border: 2px solid black;
@@ -48,4 +48,20 @@ p{
 }
 button{
     display: inline-block;
+}
+div#time{
+    border: 3px solid brown;
+    width: 40%;
+    margin: 10px auto 0px auto;
+    display: inline-flex;
+}
+div#gold{
+    border: 3px solid brown;
+    width: 40%;
+    margin: 0px auto 10px auto;
+}
+h3{
+    text-align: center;
+    padding: 0;
+    margin: auto;
 }
