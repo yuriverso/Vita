@@ -14,28 +14,53 @@
             <span id="h">0</span>
             <span id="min">0</span>
             <span id="seg">0</span>
-            <button onclick="start()" id="start">Start</button>
-            <button onclick="stop()">Stop</button>
+            <button onclick="start()" >Start</button>
+            <button onclick="pause()">Stop</button>
         </div>
     </header>
     <main>
+        <div id="menu">
+
+        </div>
         <div id="panel">
             <div id="time">
-                <h3>Dia 1</h3>
+                <h3 id="day">Dia 1</h3>
                 <h3 id="timeTracker">00:00</h3>
+                <button id="start" onclick="start()">></button>
+                <button onclick="pause()">||</button>
             </div>
             <div id="image">
                 <img src="img/vitabasic.png" alt="background" id="backimage" width="400">
                 <img src="img/vitahouse.png" alt="house" id="house" width="400">
             </div>
-            <div id="gold">
-                <h3>+300</h3>
+            <div id="gold-box">
+                <h3 id="gold-label">Gold: </h3>
+                <h3 id="gold">0</h3>
+            </div>
+            <div>
+                <h4 id="message"></h4>
             </div>
             <section>
                 <h4>Casa</h4>
-                <p>uma descrição detalhada do que essa compra vai proporcionar</p>
-                <button>Comprar</button>
+                <article>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <p id="house-bonus"></p>
+                    <p id="house-level"></p>
+                </article>
+                <button id="buy-house" onclick="buyHouse()"></button>
             </section>
+            <section>
+                <h4>Fogueira</h4>
+                <article>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <p id="bonfire-bonus"></p>
+                    <p id="bonfire-level"></p>
+                </article>
+                <button id="buy-bonfire" onclick="buyBonfire()"></button>
+            </section>
+        </div>
+        <div id="objetivos">
+
         </div>
         
     </main>

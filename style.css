@@ -1,19 +1,35 @@
-main{
-    margin: auto;
-    width: fit-content;
+body{
     text-align: center;
+}
+main{
+    text-align: center;
+    display: inline-flex;
+    border: 2px solid violet;
 }
 
 header{
     text-align: center;
     background-color: lightgray;
 }
+div#menu{
+    margin: 20px;
+    width: 250px;
+    height: 550px;
+    border: 2px solid black;
 
+}
 div#panel{
     margin: 20px;
     width: 500px;
+    height: auto;
+    border: 2px solid black;
+}
+div#objetivos{
+    margin: 20px;
+    width: 250px;
     height: 550px;
     border: 2px solid black;
+
 }
 div#image{
     margin: 0px auto;
@@ -31,11 +47,11 @@ img#house{
     position: relative;
     top: -305px;
     right: 2px;
-    visibility: visible;
+    visibility: hidden;
 }
 section{
     border: 2px solid black;
-    margin: auto 50px;
+    margin: 5px 50px;
     display: inline-flex;
 }
 h4{
@@ -55,13 +71,19 @@ div#time{
     margin: 10px auto 0px auto;
     display: inline-flex;
 }
-div#gold{
+div#gold-box{
     border: 3px solid brown;
     width: 40%;
-    margin: 0px auto 10px auto;
+    margin: 0px auto;
 }
 h3{
     text-align: center;
     padding: 0;
     margin: auto;
+}
+h3#gold, h3#gold-label{
+    display: inline;
+}
+h4#message{
+    margin: 5px auto;
 }
