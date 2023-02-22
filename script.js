@@ -5,7 +5,9 @@ var sec = 0
 var min = 0
 var h = 0
 var d = 1
-var gold = 4150
+var gold = 950
+
+var ob1 = false
 
 var house = false
 var houseLevel = 0
@@ -21,7 +23,7 @@ let bonfireBonus = 1*houseLevel
 
 
 updateValues()
-
+// Main function
 function contador(){
     sec += 1;
     if(sec===60){
@@ -39,6 +41,7 @@ function contador(){
     countGold();
 
 }
+
 function updateValues(){
     if (gold>0){
         document.getElementById("gold").innerHTML = "+"+gold
@@ -46,6 +49,7 @@ function updateValues(){
     else{
         document.getElementById("gold").innerHTML = gold
     }
+    updateObjectives()
     updateHouseValues()
     updateBonfireValues()
     
@@ -92,6 +96,18 @@ function countGold(){
     }
     
 }
+function updateObjectives(){
+    //ob1
+    if(gold>=1000){
+        ob1 = true
+    }
+    if(ob1){
+        document.getElementById("ob1").innerHTML = "Concluído!"
+    }else{
+        document.getElementById("ob1").innerHTML = gold+"/1000"
+    }
+    
+}
 
 // Buildings functions
 
@@ -119,7 +135,7 @@ function updateHouseValues(){
         document.getElementById("house-level").innerHTML = "Nível Máximo"
     }
     else{
-        document.getElementById("buy-house").innerHTML = housePrice + " gold"
+        document.getElementById("buy-house").innerHTML = housePrice + " ouro"
         document.getElementById("house-level").innerHTML = "Nível "+houseLevel+"/"+houseMaxLevel
     }
     document.getElementById("house-bonus").innerHTML = "+"+houseBonus+"/3h"
@@ -149,7 +165,7 @@ function updateBonfireValues(){
         document.getElementById("bonfire-level").innerHTML = "Nível Máximo"
     }
     else{
-        document.getElementById("buy-bonfire").innerHTML = bonfirePrice + " gold"
+        document.getElementById("buy-bonfire").innerHTML = bonfirePrice + " ouro"
         document.getElementById("bonfire-level").innerHTML = "Nível "+bonfireLevel+"/"+bonfireMaxLevel
     }
     document.getElementById("bonfire-bonus").innerHTML = "+"+bonfireBonus+"/min"
