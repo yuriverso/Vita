@@ -15,19 +15,16 @@
             <span id="min">0</span>
             <span id="seg">0</span>
             <button onclick="start()" >Start</button>
-            <button onclick="pause()">Stop</button>
+            <button onclick="pause()">Pause</button>
         </div>
     </header>
     <main>
-        <div id="menu">
-
-        </div>
         <div id="panel">
             <div id="time">
                 <h3 id="day">Dia 1</h3>
                 <h3 id="timeTracker">00:00</h3>
-                <button id="start" onclick="start()">></button>
                 <button onclick="pause()">||</button>
+                <button id="start" onclick="start()">></button>
             </div>
             <div id="image">
                 <img src="img/vitabasic.png" alt="background" id="backimage" width="400">
@@ -41,23 +38,94 @@
                 <h4 id="message"></h4>
             </div>
             <section>
-                <h4>Casa</h4>
+                <h4>imagem</h4>
                 <article>
+                    <h4>Fogueira</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="bonfire-bonus"></p>
+                    <p id="bonfire-level"></p>
+                </article>
+                <button id="buy-bonfire" onclick="buyBonfire()"></button>
+            </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Casa do Caçador</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
                     <p id="house-bonus"></p>
                     <p id="house-level"></p>
                 </article>
                 <button id="buy-house" onclick="buyHouse()"></button>
             </section>
             <section>
-                <h4>Fogueira</h4>
+                <h4>imagem</h4>
                 <article>
+                    <h4>Galpão dos Pescadores</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
-                    <p id="bonfire-bonus"></p>
-                    <p id="bonfire-level"></p>
+                    <br>
+                    <p id="fisher-bonus"></p>
+                    <p id="fisher-level"></p>
                 </article>
-                <button id="buy-bonfire" onclick="buyBonfire()"></button>
+                <button id="buy-fisher" onclick="buyFisher()"></button>
             </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Hortas</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="crops-bonus"></p>
+                    <p id="crops-level"></p>
+                </article>
+                <button id="buy-crops" onclick="buyCrops()"></button>
+            </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Ferreiro</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="blacksmith-bonus"></p>
+                    <p id="blacksmith-level"></p>
+                </article>
+                <button id="buy-blacksmith" onclick="buyBlacksmith()"></button>
+            </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Estábulo</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="stable-bonus"></p>
+                    <p id="stable-level"></p>
+                </article>
+                <button id="buy-stable" onclick="buyStable()"></button>
+            </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Centro de Treinamento</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="barracks-bonus"></p>
+                    <p id="barracks-level"></p>
+                </article>
+                <button id="buy-barracks" onclick="buyBarracks()"></button>
+            </section>
+            <section>
+                <h4>imagem</h4>
+                <article>
+                    <h4>Mercado</h4>
+                    <p>uma descrição detalhada do que essa compra vai proporcionar</p>
+                    <br>
+                    <p id="market-bonus"></p>
+                    <p id="market-level"></p>
+                </article>
+                <button id="buy-market" onclick="buyMarket()"></button>
+            </section>
+            <h4 id="invested-gold"></h4>
         </div>
         <div id="objetivos">
             <h2>Objetivos</h2>
@@ -65,24 +133,119 @@
                 <li>
                     <div>
                         <h3>Acumular 1000 de ouro</h3>
-                        <p id="ob1">completude 0/1</p>
+                        <p id="ob1"></p>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h3>objetivo 2</h3>
-                        <p>completude 0/1</p>
+                        <h3>Acumular 5000 de ouro</h3>
+                        <p id="ob2"></p>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <h3>objetivo 3</h3>
-                        <p>completude 0/1</p>
+                        <h3>Acumular 10000 de ouro</h3>
+                        <p id="ob3"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Acumular 100000 de ouro</h3>
+                        <p id="ob4">completude 0/1</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Acumular 1000000 de ouro</h3>
+                        <p id="ob5"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Fogueira</h3>
+                        <p id="ob6"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Casa do Caçador</h3>
+                        <p id="ob7"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Galpão dos Pescadores</h3>
+                        <p id="ob8"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Horta</h3>
+                        <p id="ob9"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Ferreiro</h3>
+                        <p id="ob10"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Estábulo</h3>
+                        <p id="ob11"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Centro de Treinamento</h3>
+                        <p id="ob12"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar Mercado</h3>
+                        <p id="ob13"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Investir 1000 de ouro</h3>
+                        <p id="ob14"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Investir 10000 de ouro</h3>
+                        <p id="ob15"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Investir 100000 de ouro</h3>
+                        <p id="ob16"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Investir 200000 de ouro</h3>
+                        <p id="ob17"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Investir 35000 de ouro até o dia 2</h3>
+                        <p id="ob18"></p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h3>Maximizar todas as construções</h3>
+                        <p id="ob19"></p>
                     </div>
                 </li>
             </ul>
         </div>
-        
     </main>
 </body>
 </html>
