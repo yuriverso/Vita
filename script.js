@@ -90,7 +90,6 @@ function contador(){
         min=0;
         document.getElementById("h").innerHTML = h;
     }
-    document.getElementById("seg").innerHTML = sec;
     countTime();
     countGold();
     updateValues()

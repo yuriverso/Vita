@@ -1,3 +1,0 @@
-verde rgb(43, 178, 19)
-marom escuro rgb(105, 88, 22)
-marom claro rgb(123, 104, 19)

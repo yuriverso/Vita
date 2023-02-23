@@ -76,11 +76,12 @@ img#market{
 }
 section{
     border: 2px solid black;
-    width: fit-content;
     display: inline-flex;
     margin: 5px auto;
     background-color: rgb(151, 127, 31);
-    
+}
+article{
+    width: 300px;
 }
 h4{
     padding: 0;
@@ -128,6 +129,7 @@ ul{
     padding: 0;
     display: inline;
     height: 100%;
+    list-style: none;
 }
 li{
     padding: 5px;
@@ -135,7 +137,6 @@ li{
     width: 230px;
     background-color: rgb(151, 127, 31);
     box-shadow: 2px 2px 2px black;
-
     
 }
 li>div>h3{
@@ -144,7 +145,6 @@ li>div>h3{
 p{
     display: inline;
     color: black;
-
 }
 h2{
     color: rgb(43, 178, 19);
