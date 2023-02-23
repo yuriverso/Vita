@@ -208,7 +208,7 @@ function buyBonfire(){
         investedGold += bonfirePrice
         bonfire = true;
         bonfireLevel += 1
-        //document.getElementById("bonfire").style.visibility = "visible"
+        document.getElementById("bonfire").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Fogueira comprada!"
     }
@@ -271,7 +271,7 @@ function buyFisher(){
         investedGold += fisherPrice
         fisher = true;
         fisherLevel += 1
-        //document.getElementById("fisher").style.visibility = "visible"
+        document.getElementById("fisher").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Galpão dos Pescadores comprado!"
     }
@@ -303,7 +303,7 @@ function buyCrops(){
         investedGold += cropsPrice
         crops = true;
         cropsLevel += 1
-        //document.getElementById("crops").style.visibility = "visible"
+        document.getElementById("crops").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Horta comprada!"
     }
@@ -335,7 +335,7 @@ function buyBlacksmith(){
         investedGold += blacksmithPrice
         blacksmith = true;
         blacksmithLevel += 1
-        //document.getElementById("blacksmith").style.visibility = "visible"
+        document.getElementById("blacksmith").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Ferreiro comprado!"
     }
@@ -367,7 +367,7 @@ function buyStable(){
         investedGold += stablePrice
         stable = true;
         stableLevel += 1
-        //document.getElementById("stable").style.visibility = "visible"
+        document.getElementById("stable").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Estábulo comprado!"
     }
@@ -399,7 +399,7 @@ function buyBarracks(){
         investedGold += barracksPrice
         barracks = true;
         barracksLevel += 1
-        //document.getElementById("barracks").style.visibility = "visible"
+        document.getElementById("barracks").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Centro de Treinamento comprado!"
     }
@@ -431,7 +431,7 @@ function buyMarket(){
         investedGold += marketPrice
         market = true;
         marketLevel += 1
-        //document.getElementById("market").style.visibility = "visible"
+        document.getElementById("market").style.visibility = "visible"
         document.getElementById("message").style.color = "green"
         document.getElementById("message").innerHTML = "Mercado comprado!"
     }

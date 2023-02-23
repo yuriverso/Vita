@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timer</title>
+    <title>Projeto Vita</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="timer">
-            <span id="h">0</span>
-            <span id="min">0</span>
-            <span id="seg">0</span>
-            <button onclick="start()" >Start</button>
-            <button onclick="pause()">Pause</button>
-        </div>
+        <img src="res/vitalogo.png" alt="logo" width="300">
     </header>
     <main>
         <div id="panel">
@@ -27,8 +22,17 @@
                 <button id="start" onclick="start()">></button>
             </div>
             <div id="image">
-                <img src="img/vitabasic.png" alt="background" id="backimage" width="400">
-                <img src="img/vitahouse.png" alt="house" id="house" width="400">
+                <img src="res/background.png" alt="background" id="background" width="400">
+                <div id="transparent-imgs">
+                    <img src="res/fisher.png" alt="fisher" id="fisher" width="400">
+                    <img src="res/blacksmith.png" alt="blacksmith" id="blacksmith" width="400">
+                    <img src="res/barracks.png" alt="barracks" id="barracks" width="400">
+                    <img src="res/market.png" alt="market" id="market" width="400">
+                    <img src="res/bonfire.png" alt="bonfire" id="bonfire" width="400">
+                    <img src="res/house.png" alt="house" id="house" width="400">
+                    <img src="res/stable.png" alt="stable" id="stable" width="400">
+                    <img src="res/crops.png" alt="crops" id="crops" width="400">
+                </div>
             </div>
             <div id="gold-box">
                 <h3 id="gold-label">Ouro: </h3>
@@ -38,90 +42,90 @@
                 <h4 id="message"></h4>
             </div>
             <section>
-                <h4>imagem</h4>
+                <img src="res/bonfire_icon.png" alt="bonfire_icon" width="80">
                 <article>
                     <h4>Fogueira</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="bonfire-bonus"></p>
-                    <p id="bonfire-level"></p>
+                    <p id="bonfire-bonus" class="bonus"></p>
+                    <p id="bonfire-level" class="level"></p>
                 </article>
                 <button id="buy-bonfire" onclick="buyBonfire()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/house_icon.png" alt="house_icon" width="80">
                 <article>
                     <h4>Casa do Caçador</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="house-bonus"></p>
-                    <p id="house-level"></p>
+                    <p id="house-bonus" class="bonus"></p>
+                    <p id="house-level" class="level"></p>
                 </article>
                 <button id="buy-house" onclick="buyHouse()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/fisher_icon.png" alt="fisher_icon" width="80">
                 <article>
                     <h4>Galpão dos Pescadores</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="fisher-bonus"></p>
-                    <p id="fisher-level"></p>
+                    <p id="fisher-bonus" class="bonus"></p>
+                    <p id="fisher-level" class="level"></p>
                 </article>
                 <button id="buy-fisher" onclick="buyFisher()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/crops_icon.png" alt="crops_icon" width="80">
                 <article>
                     <h4>Hortas</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="crops-bonus"></p>
-                    <p id="crops-level"></p>
+                    <p id="crops-bonus" class="bonus"></p>
+                    <p id="crops-level" class="level"></p>
                 </article>
                 <button id="buy-crops" onclick="buyCrops()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/blacksmith_icon.png" alt="blacksmith_icon" width="80">
                 <article>
                     <h4>Ferreiro</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="blacksmith-bonus"></p>
-                    <p id="blacksmith-level"></p>
+                    <p id="blacksmith-bonus" class="bonus"></p>
+                    <p id="blacksmith-level" class="level"></p>
                 </article>
                 <button id="buy-blacksmith" onclick="buyBlacksmith()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/stable_icon.png" alt="stable_icon" width="80">
                 <article>
                     <h4>Estábulo</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="stable-bonus"></p>
-                    <p id="stable-level"></p>
+                    <p id="stable-bonus" class="bonus"></p>
+                    <p id="stable-level" class="level"></p>
                 </article>
                 <button id="buy-stable" onclick="buyStable()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/barracks_icon.png" alt="barracks_icon" width="80">
                 <article>
                     <h4>Centro de Treinamento</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="barracks-bonus"></p>
-                    <p id="barracks-level"></p>
+                    <p id="barracks-bonus" class="bonus"></p>
+                    <p id="barracks-level" class="level"></p>
                 </article>
                 <button id="buy-barracks" onclick="buyBarracks()"></button>
             </section>
             <section>
-                <h4>imagem</h4>
+                <img src="res/market_icon.png" alt="market_icon" width="80">
                 <article>
                     <h4>Mercado</h4>
                     <p>uma descrição detalhada do que essa compra vai proporcionar</p>
                     <br>
-                    <p id="market-bonus"></p>
-                    <p id="market-level"></p>
+                    <p id="market-bonus" class="bonus"></p>
+                    <p id="market-level" class="level"></p>
                 </article>
                 <button id="buy-market" onclick="buyMarket()"></button>
             </section>
@@ -247,5 +251,8 @@
             </ul>
         </div>
     </main>
+    <footer>
+        <p>thanks to all</p>
+    </footer>
 </body>
 </html>

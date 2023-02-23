@@ -1,39 +1,77 @@
+@font-face {
+    font-family: "ubuntu";
+    src: url(res/Ubuntu.ttf) format('truetype');
+}
+
+*{
+    font-family: 'ubuntu';
+    color: black;
+}
 body{
     text-align: center;
+    background-image: linear-gradient(180deg, rgb(14, 144, 214), rgb(43, 178, 19),   rgb(105, 88, 22))
+
 }
 main{
     text-align: center;
     display: inline-flex;
-    width: 70%;
-    border: 2px solid violet;
+    width: 900px;
     margin: 10px;
+    background-color: rgb(123, 104, 19);
+    box-shadow: 2px 2px 4px black;
 }
 
 header{
     text-align: center;
-    background-color: lightgray;
-}
-div#objetivos{
-    width: auto;
-}
-div#screen{
-    border: 2px solid black;
-    margin: 10px 20px;
 }
 div#panel{
     margin: 20px;
     border: 2px solid black;
-    width: max-content;
 
 }
+div#objetivos{
+    width: auto;
+}
 div#image{
-    margin: 0px auto;
     height: 300px;
+    position: relative;
+    display: inline-flex;
+    box-shadow: 1px 1px 4px black;
+}
+div#transparent-imgs{
+    position: absolute;
+
+}
+img#bonfire{
+    position: absolute;
+    visibility: hidden;
 }
 img#house{
-    position: relative;
-    top: -305px;
-    right: 2px;
+    position: absolute;
+    visibility: hidden;
+}
+img#fisher{
+    position: absolute;
+    visibility: hidden;
+}
+img#stable{
+    position: absolute;
+    visibility: hidden;
+}
+img#blacksmith{
+    position: absolute;
+    visibility: hidden;
+}
+img#crops{
+    position: absolute;
+    visibility: hidden;
+}
+img#barracks{
+    position: absolute;
+    visibility: hidden;
+}
+img#market{
+    position: absolute;
     visibility: hidden;
 }
 section{
@@ -41,42 +79,47 @@ section{
     width: fit-content;
     display: inline-flex;
     margin: 5px auto;
+    background-color: rgb(151, 127, 31);
     
 }
 h4{
     padding: 0;
     margin: 5px 5px 0px 5px;
+    color: rgb(43, 178, 19);
+    text-shadow: 1px 1px 2px black;
 }
-p{
-    padding: 0;
-    margin: 0px 5px 5px 5px;
-}
-button{
-    display: inline-block;
-}
+
+
 div#time{
-    border: 3px solid brown;
+    border: 3px solid rgb(105, 88, 22);
     margin: 0;
     width: 40%;
     display: inline-flex;
+    box-shadow: 1px 1px 3px black;
+    background-color: rgb(151, 127, 31);
 }
 div#gold-box{
-    border: 3px solid brown;
+    border: 3px solid rgb(105, 88, 22);
     width: 40%;
     margin: 0px;
-    background-color: white;
+    background-color: rgb(151, 127, 31);
     display: inline-flex;
+    box-shadow: 1px 1px 3px black;
 }
 h3{
     text-align: center;
     padding: 0;
     margin: auto;
 }
-h3#gold, h3#gold-label{
+h3#gold{
+    color: gold;
+}
+h3#gold-label{
     display: inline;
 }
 h4#message{
     margin: 5px auto;
+    text-shadow: 1px 1px 2px black;
 }
 div#objetivos > h2{
     margin: 0;
@@ -84,12 +127,15 @@ div#objetivos > h2{
 ul{
     padding: 0;
     display: inline;
+    height: 100%;
 }
 li{
     padding: 5px;
     margin: 5px 15px;
-    width: max-content;
-    border: 1px solid black;
+    width: 230px;
+    background-color: rgb(151, 127, 31);
+    box-shadow: 2px 2px 2px black;
+
     
 }
 li>div>h3{
@@ -97,4 +143,26 @@ li>div>h3{
 }
 p{
     display: inline;
+    color: black;
+
+}
+h2{
+    color: rgb(43, 178, 19);
+    text-shadow: 1px 1px 1px black;
+}
+button{
+    background-color: rgb(165, 164, 164);
+    border-style: outset;
+    border-color: rgb(105, 88, 22);
+}
+button:active{
+    border-style: inset;
+}
+.bonus{
+    color: gold;
+    text-shadow: 1px 1px 2px black;
+}
+.level{
+    color: lightgray;
+    text-shadow: 1px 1px 2px black;
 }
