@@ -80,15 +80,13 @@ updateValues()
 // Main function
 function contador(){
     sec += 1;
-    if(sec===60){
+    if(sec>=60){
         min++;
-        document.getElementById("min").innerHTML = min;
         sec=0;
     }
     if(min===24){
         d+=1;
         min=0;
-        document.getElementById("h").innerHTML = h;
     }
     countTime();
     countGold();
